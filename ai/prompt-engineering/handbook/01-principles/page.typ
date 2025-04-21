@@ -23,4 +23,5 @@
 + *Evaluate quality.*
 + *Divide labor.*
   - Divide a task into multiple steps. 
+  
 

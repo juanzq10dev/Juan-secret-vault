@@ -19,13 +19,17 @@ Poor chunking may lead to:
 - Struggling to generate accurate summaries or translations. 
 
 == Chunking strategies
+#show figure: set block(breakable: true)
 #figure(
   caption: [Six chunking strategies highlighting their advantages and disadvantages. 
   
   Source: #cite(<promptForGenAI>, form: "prose")],
 )[
+#set par(justify: false)
+
 #table(
-  columns: 3,
+  columns: (1.4fr, 2fr, 2fr),
+  align: left,
   [*Splitting strategy*], [*Advantages*], [*Disadvantages*],
 
   [By sentence ], [Preserves context, suitable for various tasks], [May not be efficient for very long context],
@@ -54,6 +58,7 @@ Given:
 
 The sliding window moves across the sequence from left to right, extracting overlapping windows.
 
+#show raw.where(block: true): set block(breakable: true)
 #raw("Example: (Window Size = 3, Stride = 1):
   Sequence: (For example chunks of a long file)
     [A, B, C, D, E]

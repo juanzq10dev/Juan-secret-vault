@@ -1,4 +1,20 @@
-#align(center, text(25pt)[
+#set page(
+  paper: "us-letter",
+  header: align(right, "Prompt Engineering"),
+  numbering: "1",
+  columns: 2
+)
+
+#set text(lang: "en")
+#set par(justify: true)
+
+#place(
+  top + center,
+  float: true,
+  scope: "parent",
+  clearance: 2em,
+)[
+  #align(center, text(25pt)[
   *Prompt Engineering*
 ])
 
@@ -14,6 +30,8 @@
   #set par(justify: false)
   *Abstract* \
   This is a set of notes in order to learn about prompt engineering
+]
+
 ]
 
 #show raw.where(block: false): box.with(fill: rgb("0909092f"), inset: 1pt)
