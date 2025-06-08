@@ -35,6 +35,7 @@ java {
 application {
     // Define the main class for the application.
     mainClass = "jlox.Lox"
+    // mainClass = "tool.GenerateAst"
 }
 
 tasks.named<Test>("test") {
