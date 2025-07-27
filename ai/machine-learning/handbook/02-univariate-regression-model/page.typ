@@ -1,4 +1,4 @@
-= Linear Regression Model
+= Linear Regression Model (Univariate)
 
 Before learning linear regression we need to know how to interpret a training set.
 == Training set terminology
@@ -114,5 +114,3 @@ We want to get values for $w$ and $b$ that make the model $f$ fit well out datas
   *Note:* Remember $f_(w, b)(x) = hat(y)$, so you can replace that on the formula too.
 
   *Note:* Gradient descent stops when a local minima is found. But in linear regression there is only one local minima because the function is convex. 
-    
-
