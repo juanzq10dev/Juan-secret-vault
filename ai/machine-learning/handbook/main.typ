@@ -42,7 +42,8 @@
 #show raw.where(block: true): box.with(fill: rgb("0909092f"), inset: 5pt, width: 100%)
 
 #include "01-introduction/page.typ"
-#include "02-regression-model/page.typ"
+#include "02-univariate-regression-model/page.typ"
+#include "03-multiple-linear-regression/page.typ"
 
 // #cite(<promptForGenAI>, form: "prose"), 2020)
 // #bibliography("works.bib", full: true)
