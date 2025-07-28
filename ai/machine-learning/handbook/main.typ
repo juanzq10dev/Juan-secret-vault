@@ -4,7 +4,9 @@
   paper: "us-letter",
   header: align(right, title),
   numbering: "1",
-  columns: 2
+  columns: 2,
+  flipped: true
+  
 )
 
 #set text(lang: "en")
@@ -44,6 +46,9 @@
 #include "01-introduction/page.typ"
 #include "02-univariate-regression-model/page.typ"
 #include "03-multiple-linear-regression/page.typ"
+
+#include "04-classification/page.typ"
+
 
 // #cite(<promptForGenAI>, form: "prose"), 2020)
 // #bibliography("works.bib", full: true)
