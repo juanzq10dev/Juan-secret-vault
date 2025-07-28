@@ -48,6 +48,7 @@
 #include "03-multiple-linear-regression/page.typ"
 
 #include "04-classification/page.typ"
+#include "05-overfitting/page.typ"
 
 
 // #cite(<promptForGenAI>, form: "prose"), 2020)
