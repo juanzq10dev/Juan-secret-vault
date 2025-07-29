@@ -22,4 +22,4 @@ All this paradigms are interesting for architecture:
 - Object-oriented programming imposes discipline on indirect transfer of control.
 - Functional programming imposes discipline upon assignment.
 
-*Personal insights*
+*Personal insights:* I did not know that there are three paradigms. I surprised that all three paradigms are important for architecture. I think it is true, sometimes while doing OOP I ensure that functions are pure, and purism is something of functional programming.

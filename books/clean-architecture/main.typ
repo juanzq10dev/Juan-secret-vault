@@ -4,7 +4,6 @@
   paper: "us-letter",
   header: align(right, title),
   numbering: "1",
-  columns: 1,
 )
 
 #set text(lang: "en")
@@ -49,3 +48,5 @@
 #include "02/page.typ"
 #pagebreak()
 #include "03/page.typ"
+#pagebreak()
+#include "04/page.typ"
