@@ -50,6 +50,8 @@
 #include "04-classification/page.typ"
 #include "05-overfitting/page.typ"
 
+#include "06-neural-networks/page.typ"
+
 
 // #cite(<promptForGenAI>, form: "prose"), 2020)
 // #bibliography("works.bib", full: true)
