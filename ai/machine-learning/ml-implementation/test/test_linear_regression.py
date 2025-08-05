@@ -1,6 +1,6 @@
 import numpy as np
 import pytest
-from src.linear_regression import LinearRegression
+from regression_models.linear_regression import LinearRegression
 
 
 def test_fit_predict_basic():
