@@ -5,8 +5,7 @@
   header: align(right, title),
   numbering: "1",
   columns: 2,
-  flipped: true
-  
+  flipped: true,
 )
 
 #set text(lang: "en")
@@ -19,26 +18,26 @@
   clearance: 2em,
 )[
   #align(center, text(25pt)[
-  *#title*
-])
+    *#title*
+  ])
 
-#grid(
-  columns: (1fr),
-  align(center)[
-    Juan Manuel Zurita Quinteros \
-    #link("mailto:juanzq10dev@gmail.com")
+  #grid(
+    columns: 1fr,
+    align(center)[
+      Juan Manuel Zurita Quinteros \
+      #link("mailto:juanzq10dev@gmail.com")
+    ]
+  )
+
+  #align(center)[
+    #set par(justify: false)
+    *Abstract* \
+    This is a set of notes in order to learn about machine learning
+
   ]
-)
-
-#align(center)[
-  #set par(justify: false)
-  *Abstract* \
-  This is a set of notes in order to learn about machine learning
 
 ]
-
-]
-  #outline()
+#outline()
 
 #show raw.where(block: false): box.with(fill: rgb("0909092f"), inset: 1pt)
 #show raw.where(block: true): box.with(fill: rgb("0909092f"), inset: 5pt, width: 100%)
@@ -50,7 +49,10 @@
 #include "04-classification/page.typ"
 #include "05-overfitting/page.typ"
 
+#pagebreak()
 #include "06-neural-networks/page.typ"
+#pagebreak()
+#include "07-multiclass-classification/page.typ"
 
 
 // #cite(<promptForGenAI>, form: "prose"), 2020)
