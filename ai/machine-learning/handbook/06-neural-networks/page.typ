@@ -155,3 +155,16 @@ Note: Hidden layers usually use ReLU.
   $,
   "Used in binary classification. Outputs between 0 and 1.",
 )
+
+== Optimization of gradient descent
+=== The Adam algorithm
+*Definition:* Adam (Adaptive Moment Estimation) algorithm is an optimization algorithm used to update the weights of a neural network during training based on the gradient of the loss function.
+
+*Problem it solves:*
+- Solves gradient descent limitations using the learning rate for all parameters which can be slow or may struggle with sparse data.
+
+*How it works:*
+For each parameter in the network:
++ Keeps track of moving averages.
++ Applies a bias correction.
++ Updates weight using learning rate.
