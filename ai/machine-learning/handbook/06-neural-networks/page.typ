@@ -42,6 +42,36 @@ Example:
 + Each layer is composed from neurons.
 + Neurons calculate values in parallel and pass the value to the next layer (This is called forward propagation).
 
+=== Dense layer
+*What is it?:*
+Is a type of neural network layer where each neuron is connected to every neuron in the previous layer.
+
+*Problem it solves:* Combines and learns from all the features coming from the previous layer.
+
+*How it works:*
++ Each neuron receives all outputs from the previous layer.
++ Each neuron applies weights, bias and activation function.
++ The outputs are passed to the next layer.
+
+=== Convolution layer
+#figure(caption: "Convolutional network")[
+  #image("images/convolutional-layer.png")
+]
+*What is it?* A special layer designed to extract local patterns from structured data (like images), where each neuron only looks at part of the previous layer's output.
+
+*Problem it solves:*
+- Preserve spatial structures.
+- Reduces numbers of parameters which becomes the training more efficient.
+
+*How it works:*
++ A filter slides over the input data.
++ At each location it performs dot product with a small patch of the image.
++ Adds the result (outputs a new pixel in the features map)
++ This feature map highlights certain patterns.
+
+This way neural networks learn to recognize images.
+
+
 == Neurons
 
 *What is it?*
@@ -91,7 +121,7 @@ It's how a neural network makes predictions.
 
 *Definition*: Activation functions are non-linear functions applied to the neuron output.
 
-*Problem it solves:* 
+*Problem it solves:*
 - Without them neural networks would just be linear regression.
 
 *How it works:*
@@ -107,16 +137,18 @@ Note: Hidden layers usually use ReLU.
   inset: 10pt,
   align: horizon,
   table.header([Function], [Formula], [Use & Behavior]),
-  "ReLU", 
+  "ReLU",
   $
     f(z) = max(0, z)
   $,
   "Keeps only positive values",
+
   "Sigmoid",
   $
     f(z) = 1 / (1 + e^(-z))
   $,
   "Used in binary classification. Outputs between 0 and 1.",
+
   "Softmax",
   $
     f(z_i) = e^(z_i) / (sum (e^z_j)) )
