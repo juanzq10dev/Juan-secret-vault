@@ -85,3 +85,41 @@ It's how a neural network makes predictions.
 + The output of one layer becomes the input for the next layer.
 + This continues through all hidden layers.
 + Final output is the model's prediction.
+
+
+== Activation functions
+
+*Definition*: Activation functions are non-linear functions applied to the neuron output.
+
+*Problem it solves:* 
+- Without them neural networks would just be linear regression.
+
+*How it works:*
++ A neuron calculates a weighted sum.
++ The activation function takes that value and transforms it.
++ This activation value is passed to the next layer.
+
+Note: Hidden layers usually use ReLU.
+
+*Common activation functions*
+#table(
+  columns: (auto, auto, auto),
+  inset: 10pt,
+  align: horizon,
+  table.header([Function], [Formula], [Use & Behavior]),
+  "ReLU", 
+  $
+    f(z) = max(0, z)
+  $,
+  "Keeps only positive values",
+  "Sigmoid",
+  $
+    f(z) = 1 / (1 + e^(-z))
+  $,
+  "Used in binary classification. Outputs between 0 and 1.",
+  "Softmax",
+  $
+    f(z_i) = e^(z_i) / (sum (e^z_j)) )
+  $,
+  "Used in binary classification. Outputs between 0 and 1.",
+)
