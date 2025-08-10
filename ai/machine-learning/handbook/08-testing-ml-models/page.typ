@@ -13,7 +13,6 @@ This section talks about some techniques we can use to test/debug a model.
 == Testing classification
 
 *How can we do it?*
-
 + It is pretty similar to testing for linear regression.
 + But we will calculate when predictions are not good $hat(y) != y$
 
@@ -21,7 +20,9 @@ This section talks about some techniques we can use to test/debug a model.
 First, we need to know how to select a model.
 
 === Selecting a polynomial model
-This is a technique to select how many polynomial degrees we can add.
+Adding polynomials may help to solve overfit and underfit problems.
+
+*Problem it solves:* We need to know how to select the degree of the polynomial (How many polynomials to have).
 
 *How can we do it?*
 + Split data in three: 60% to train, 20% cross validation (cv), 20% test.
@@ -57,8 +58,11 @@ We use this to choose which value is good to regularization term ($lambda$) of c
 + Compute cross validation error for all of them (use cost function with regularization).
 + The smaller value is the regularization term that is correct.
 
-=== Establish a level of performance
-Humans also have errors, we can base on that to select a reasonable level error of performance and diagnose bias and variance problems based on that.
+=== Baseline level of performance
+*What is it?* A reasonable level error of performance to diagnose bias and variance problems based on that.
+
+
+*Problem it solves:* Models will always have failures (as humans), we need a reasonable level of performance to prove our model.
 
 *How can we do it?*
 + Choose a baseline performance based on human error.
@@ -89,7 +93,7 @@ Those are all debugging solutions for a model in summary
 == Bias/variance and neural networks
 There are some things we need to know about neural networks:
 
--  Neural networks fix bias and variance this way:
+- Neural networks fix bias and variance this way:
 
 #figure(caption: "Bias and variance in neural network")[
   #image("images/neural-network-cycle.png")
