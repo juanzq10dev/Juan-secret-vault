@@ -51,9 +51,18 @@
 
 #pagebreak()
 #include "06-neural-networks/page.typ"
+
 #pagebreak()
 #include "07-multiclass-classification/page.typ"
 
+#pagebreak()
+#include "08-testing-ml-models/page.typ"
+
+#pagebreak()
+#include "09-ml-development-process/page.typ"
+
+#pagebreak()
+#include "10-skewed-dataset/page.typ"
 
 // #cite(<promptForGenAI>, form: "prose"), 2020)
 // #bibliography("works.bib", full: true)
