@@ -60,6 +60,7 @@ We want to get values for $w$ and $b$ that make the model $f$ fit well out datas
   The main objective is to minimize the result of the cost function.
 
   In linear regression cost function will always be a convex function.
+  
 == Gradient descent
 
 - *Main concept:*
