@@ -64,5 +64,8 @@
 #pagebreak()
 #include "10-skewed-dataset/page.typ"
 
+#pagebreak()
+#include "11-binary-trees/page.typ"
+
 // #cite(<promptForGenAI>, form: "prose"), 2020)
 // #bibliography("works.bib", full: true)
