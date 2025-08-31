@@ -70,5 +70,9 @@
 #pagebreak()
 #include "12-clustering/page.typ"
 
+#pagebreak()
+#include "13-anomaly-detection/page.typ"
+
+
 // #cite(<promptForGenAI>, form: "prose"), 2020)
 // #bibliography("works.bib", full: true)
