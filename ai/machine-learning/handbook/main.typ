@@ -73,6 +73,9 @@
 #pagebreak()
 #include "13-anomaly-detection/page.typ"
 
+#pagebreak()
+#include "14-recommender-systems/page.typ"
+
 
 // #cite(<promptForGenAI>, form: "prose"), 2020)
 // #bibliography("works.bib", full: true)
