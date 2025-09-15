@@ -99,24 +99,24 @@ We use normal distribution to calculate probability of one value. We just multip
 
 *Recommendation / Considerations:*
 - If there is too little data we might not have a test set, in that case use only cross validation set.
-- Many concepts learn for skewed-dataset section, can be apply: 
-  - Precision / Recall. 
-  - Selecting many $epsilon$, getting $F_1$, and the major $F_1$ wins. 
+- Many concepts learn for skewed-dataset section, can be apply:
+  - Precision / Recall.
+  - Selecting many $epsilon$, getting $F_1$, and the major $F_1$ wins.
 
 == Anomaly Detection vs Supervised Learning.
 
 *Anomaly Detection:*
-- Useful when we have very small positive examples. 
-- If there are many types of anomalies, or future anomalies make look very different (because it used unlabeled data). 
+- Useful when we have very small positive examples.
+- If there are many types of anomalies, or future anomalies make look very different (because it used unlabeled data).
 
 *Supervised Learning:*
 - Large number of positive and negative examples (because we need labeled data.)
-- If future anomalies will look like the existing.  
+- If future anomalies will look like the existing.
 
 == Recommendations / Tips
 
 === Choosing which feature to use.
-- Because we have unlabeled data, it is important to choose good features. 
+- Because we have unlabeled data, it is important to choose good features.
 - Better choose gaussian features.
 
 === How to deal with no Gaussian features
@@ -126,8 +126,8 @@ We use normal distribution to calculate probability of one value. We just multip
   #image("images/non_gaussian_distribution.png")
 ]
 
-=== Error analysis 
-We may have a huge $p(x)$ for anomalies an non anomalies values, this will make the algorithm to fail. 
+=== Error analysis
+We may have a huge $p(x)$ for anomalies an non anomalies values, this will make the algorithm to fail.
 
 #figure(caption: "An anomaly that looks like normal")[
   #image("images/error-on-analysis.png")
