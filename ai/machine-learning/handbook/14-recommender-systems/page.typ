@@ -94,3 +94,70 @@ $
     x_k^((i)) = x_k^((i)) - alpha partial / ( partial x_k^((i)) ) J(w, b,x) \
   }
 $
+
+=== Binary levels
+*Definition:* This is collaborative filtering, but for binary labels, e.g click or not click, like or dislike.
+
+*How it works:*
+It is collaborative filtering, but instead of linear regression it becomes logistic regression, so you use:
+
+$
+  f_( (w, b, x) )(x) = g(w dot x + b)
+$
+
+$
+  g(z) = 1 / ( 1 + e^(-z) )
+$
+
+To calculate loss function of a single example:
+
+$
+  L(f_( (w, b, x) )(x), y^((i,j)) )= \ - y^((i,j)) log (f_( (w, b, x) )(x)) - ( 1 - y^((i, j)) ) log (1 - f_( (w, b, x) )(x))
+$
+
+And for all examples:
+$
+  J (w, b, x) = sum_( (i, j):r(i, j) = 1 ) L ( f_(w, b, x) (x), y^((i, j)) )
+$
+
+=== Mean normalization
+
+*Definition:* It is a preprocessing step where user's rating are adjusted.
+
+*Problem it solves:*
+- This center ratings around zero and removes individual rating vias.
+
+*How it works:*
+
++ Create average array $mu$.
++ Subtract array $mu$ to initial items $y$, now this will be the new $y$
++ Use the normalized rating for prediction.
++ We need to sum $mu$ on logistic regression.
+$
+  w^((j)) dot x^((i)) + b^((j)) + mu_i
+$
+
+=== Finding similar items
+We can use collaborative filtering with to find related items:
+
+*How it works:*
+To find other items similar to $i$ with features $x^((i))$ find item $k$ with $x^((k))$ that similar to $x^((i))$.
+
+So we can use mean squared error to compare the features and get the one with the smallest error:
+
+$
+  sum_(l = 1)^n = ( x_l^((k)) - x_l^((i)) )^2
+$
+
+=== The Cold start problem
+- How do we rank new items that few users have rated?
+- How de we show something reasonable to users that do not have rated much movies?
+
+In this case you use side information about items or users:
+- Item: genre, movie start, studio.
+User: Demographics (age, gender, locations), expressed preferences (like asking users in a form)
+
+
+#pagebreak()
+
+== Content based filtering
