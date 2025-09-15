@@ -1,12 +1,12 @@
 import numpy as np
-from typing import Union, Any
+from numpy.typing import NDArray
 
 
-def linear_regression_model(x: np.ndarray, w: np.ndarray, b: float) -> float:
+def linear_regression_model(x: NDArray, w: NDArray, b: float) -> float:
     return np.dot(x, w) + b
 
 
-def squared_error_cost_function(y_hat: np.ndarray, y: np.ndarray) -> float:
+def squared_error_cost_function(y_hat: NDArray, y: NDArray) -> float:
     if y_hat.shape != y.shape:
         raise ValueError("Shapes of y_hat and y must be equal")
 
@@ -16,13 +16,13 @@ def squared_error_cost_function(y_hat: np.ndarray, y: np.ndarray) -> float:
 
 
 def gradient_descent(
-    x: np.ndarray,
-    y: np.ndarray,
-    w: np.ndarray,
+    x: NDArray,
+    y: NDArray,
+    w: NDArray,
     b: float,
     learning_rate: float,
     epoch: int,
-) -> tuple[np.ndarray, float]:
+) -> tuple[NDArray, float]:
     m = x.shape[0]
 
     for i in range(epoch):
