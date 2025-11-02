@@ -63,6 +63,7 @@ Examples of pain:
 
 == Suffering
 - Suffering is the reaction we have to pain.
+- Suffering is teh resistance to change caused by an event that causes pain.
 - Suffering is on your mind.
 - Luckily, you can avoid suffering (it is on your mind, believe it or not, you can control your mind).
 - Suffering lasts much longer than pain (but it should not, do not let suffer trap your mind).
@@ -85,7 +86,35 @@ Examples of suffering:
 - It is horrible, you may overthink a situation too much, and you will probably get tired, because overthinking is really overwhelming.
 - Overthinking is valid, but most of times is unnecessary, accept your thoughts like if they were clouds, but do not let them trap your mind.
 
-*Why it happens?*
-- You want total control of a situation.
-- You have fear of what you may happen.
+*Why it happens?* \
+Some reasons, may be:
+- Fear of uncertainty:
+  - You want total control of a situation.
+  - You have fear of what you may happen.
 - You get used to it, and it became automatic on you.
+
+= Auto-sabotage
+*What is it?*
+- Sabotage are all deliberative behaviors you do to undermine your own goals or success.
+
+*Examples:*
+- Staying on your phone until late hours instead of doing your homework.
+- Doing other things instead of what you have to do. Like ordering your bed, or cleaning your house, instead of doing your homework.
+
+*Why it happens?* \
+There are lots of reasons, this may be some of them:
+- Fear (of failure, of judgement, of conflict, of uncertainty, etc)
+- Doubting of your own skills. 
+- Low self-esteem.
+
+= Limits
+- Limits are personal boundaries that define what you accept and what you do not. 
+
+- There are three ways to put limits to other persons:
+ - *Spoken:* You clearly express what behavior bothered you and you explain why it did. This explanation is important, it helps the other person to understand your perspective.
+
+   Example: 
+   "I know it is a joke to you, but I do not like you doing that, it makes me uncomfortable me"
+
+ - *Limitings:* If you have already spoken, but the person does not seem to listen or to respect your boundary, you begin to distance yourself from him/she.
+ - *Definitive:* If even after several chances, the behavior continues, you end contact.
