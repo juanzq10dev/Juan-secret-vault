@@ -1,4 +1,4 @@
-from lib.strategies.linear_regression_strategy import LinearRegressionStrategy
+from lib.strategies.logistic_regression_strategy import LogisticRegressionStrategy
 from lib.contexts.supervised_learning_model_context import (
     TrainedRegression,
     UntrainedRegression,
@@ -6,14 +6,14 @@ from lib.contexts.supervised_learning_model_context import (
 from lib.abc.models import TrainedModel
 
 
-class TrainedLinearRegression(TrainedRegression):
+class TrainedLogisticRegression(TrainedRegression):
     def __init__(self, weights, bias) -> None:
-        super().__init__(weights, bias, LinearRegressionStrategy())
+        super().__init__(weights, bias, LogisticRegressionStrategy())
 
 
-class UntrainedLinearRegression(UntrainedRegression):
+class UntrainedLogisticRegression(UntrainedRegression):
     def __init__(self) -> None:
-        super().__init__(LinearRegressionStrategy())
+        super().__init__(LogisticRegressionStrategy())
 
     def fit(
         self,
@@ -23,4 +23,4 @@ class UntrainedLinearRegression(UntrainedRegression):
         epoch: int = 1000,
     ) -> TrainedModel:
         trained_model = super().fit(features, outputs, learning_rate, epoch)
-        return TrainedLinearRegression(trained_model.weights, trained_model.bias)
+        return TrainedLogisticRegression(trained_model.weights, trained_model.bias)

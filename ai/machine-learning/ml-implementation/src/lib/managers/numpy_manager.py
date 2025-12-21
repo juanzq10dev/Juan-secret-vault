@@ -1,18 +1,22 @@
 import numpy as np
+from numpy.typing import NDArray
 
 
-class NumpyManager:
-    def create_ndarray_from_list(self, list: list) -> np.ndarray:
+class NDArrayUtils:
+    def from_list(self, list: list) -> NDArray:
         return np.array(list)
 
-    def create_zeros_array_with_len(self, len: int) -> np.ndarray:
-        return np.zeros(len)
+    def zeros(self, size: int) -> NDArray:
+        return np.zeros(size)
 
-    def ndarray_rows(self, ndarray: np.ndarray) -> int:
+    def get_rows_count(self, ndarray: NDArray) -> int:
         return ndarray.shape[0]
 
-    def ndarray_columns(self, ndarray: np.ndarray) -> int:
+    def get_columns_count(self, ndarray: NDArray) -> int:
         return ndarray.shape[1]
 
-    def have_same_rows(self, first: np.ndarray, second: np.ndarray) -> bool:
-        return self.ndarray_rows(first) == self.ndarray_rows(second)
+    def have_same_row_count(self, first: NDArray, second: NDArray) -> bool:
+        return self.get_rows_count(first) == self.get_rows_count(second)
+
+
+ndarray_utils = NDArrayUtils()
