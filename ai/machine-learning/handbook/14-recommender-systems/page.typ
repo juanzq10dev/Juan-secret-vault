@@ -236,20 +236,19 @@ In order to manage large datasets we use two steps: Retrieval & Ranking.
 + Choose a new $z$ axis (this will be our new principal component) and project examples onto axis $z$.
   - We should choose one $z$ axis and do the projection
   #figure(caption: "Projecting points to axis z")[
-    #image("images/project-z-axis.png")
+    #image("images/project-z-axis.png", fit: "contain", height: 30%)
   ]
   - There are many options for $z$ axis, we should choose the one that generates the max variance.
   #figure(caption: "Z axis with high variance")[
-    #image("images/z-axis-with-max-variance.png")
+    #image("images/z-axis-with-max-variance.png", fit: "contain", height: 30%)
   ]
   - We get the length of the $1$ vector, we get the coordinates of the point and do the dot product.
   $
     "point coordinates" dot "length 1 vector" = "value of projection"
   $
   #figure(caption: "Calculate projection")[
-    #image("images/calculate-projection.png")
+    #image("images/calculate-projection.png", fit: "contain", height: 40%)
   ]
-
 More techniques:
 + In order to get more principal components:
   - A 2nd axis is 90° of axis 1.
