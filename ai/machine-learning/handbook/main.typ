@@ -76,6 +76,10 @@
 #pagebreak()
 #include "14-recommender-systems/page.typ"
 
+#pagebreak()
+#include "15-reinforcement-learning/page.typ"
+
+
 
 // #cite(<promptForGenAI>, form: "prose"), 2020)
 // #bibliography("works.bib", full: true)
