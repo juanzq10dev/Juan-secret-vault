@@ -5,8 +5,8 @@ A branch of machine learning where an agent learns to make decisions based on a 
 
 *Terminology*\
 #table(
-  columns: 3,
-  [Symbol], [Concept], [Explanation],
+  columns: (1fr, 0.75fr, 2fr),
+  [*Symbol*], [*Concept*], [*Explanation*],
 
   [$s$],
   [State],
@@ -47,20 +47,20 @@ A branch of machine learning where an agent learns to make decisions based on a 
 
 *Important formulas*\
 #table(
-  columns: (0.5fr, 0.75fr, 2fr),
-  [Concept], [Explanation], [Formula],
+  columns: (0.6fr, 0.8fr, 2fr),
+  [*Concept*], [*Explanation*], [*Formula*],
 
   [Return],
   [Calculate the return],
   [
-    $ "Return" = R_1 + gamma R_2 + gamma^2 R_2 + ... "until terminal state" $],
+    $ "Return" = R_1 + gamma R_2 + gamma^2 R_2  + \ ... "until terminal state" $],
 
   [Bellman equation],
   [A formula to compute state value equation ($Q$)],
   [
     $
       Q(s,a) = R(s) + gamma max_a' (s', a') \
-      Q(s,a) = R_1 + gamma max [R_2 + gamma R_3 + gamma^2 R_4]
+      Q(s,a) = R_1 + gamma max  [R_2 + gamma R_3 + \ gamma^2 R_4 + ... ]
     $
   ],
 )
