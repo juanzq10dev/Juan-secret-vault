@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "jzurita-reinforcement-learning"
+version = "0.1.0"
+description = "A reinforcement learning implementation"
+authors = [
+    { name = "Juan Manuel Zurita Quinteros", email = "juanzq10dev@jalasoft.com" }
+]
+license = { text = "MIT" }
+readme = "README.md"
+requires-python = ">=3.10"
+
+dependencies = [
+    "numpy==2.2.6",
+    "gymnasium[classic-control]>=1.0.0",
+    "matplotlib>=3.7.0",
+]
