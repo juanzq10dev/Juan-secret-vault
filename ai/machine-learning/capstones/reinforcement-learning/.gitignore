@@ -1,0 +1,62 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+pytest_cache
+
+# Virtual environment
+.env/
+.venv/
+env/
+venv/
+ENV/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# VS Code settings
+.vscode/
+
+# PyCharm settings
+.idea/
+
+# Distribution / packaging
+*.egg-info/
+dist/
+build/
+
+# pytest
+.cache/
+*.cover
+*.pyc
+coverage.xml
+htmlcov/
+
+# Logs
+*.log
+
+# Data / artifacts (optional - uncomment if needed)
+# *.csv
+# *.tsv
+# *.parquet
+# *.h5
+# *.pkl
+# *.joblib
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# MyPy
+.mypy_cache/
+
+# Jupyter runtime
+~$*
+*.bak
+
+# Project-specific
+*.db
+*.sqlite3
+*.model
+models/
+outputs/
