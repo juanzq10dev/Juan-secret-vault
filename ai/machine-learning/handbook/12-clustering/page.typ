@@ -46,7 +46,7 @@ By definition K-mean algorithm never diverges, always reduces $J$.
 == Random initialization.
 *Definition:* It is a technique to initialize cluster centroids in an optimal way.
 
-*Problem it solves:* Depending on the starting point of cluster centroids, K-mean may may be diverge faster or not.
+*Problem it solves:* Depending on the starting point of cluster centroids, K-mean may diverge faster or not.
 
 *How it works:*
 + Given  $K < m$.
