@@ -1,12 +1,25 @@
-import sys
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 from sklearn.cluster import KMeans
 from sklearn.decomposition import PCA
 
-sys.path.insert(0, "src")
-from api.type_chart import defending_multipliers, ALL_TYPES
+from src.domain.pokemon.types import PokemonType
+from src.repositories.type_chart_repository import JsonTypeChartRepository
+
+_type_chart = JsonTypeChartRepository().load()
+ALL_TYPES = list(_type_chart.keys())
+
+
+def defending_multipliers(type1: str, type2: str = "") -> dict:
+    t1 = PokemonType(type1)
+    t2 = PokemonType(type2) if type2 else None
+    return {
+        attacker: _type_chart[attacker].get_effectiveness_against(t1)
+        * (_type_chart[attacker].get_effectiveness_against(t2) if t2 else 1.0)
+        for attacker in ALL_TYPES
+    }
+
 
 # 1. Cargar datos
 df = pd.read_csv("data/pokemon_hgss.csv")

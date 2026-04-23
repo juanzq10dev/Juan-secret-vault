@@ -1,8 +1,9 @@
 # Pokemon HG/SS Team Builder
 
-This is Pokemon HG/SS Team Builder, a project to build your Pokemon Team for Pokemon HeartGold and Soul Silver applying clustering to build a diverse.
+Suggests a balanced 6-member Pokemon team using KMeans clustering on Gen IV (HeartGold/SoulSilver) data.
 
-## How to run
+
+## Getting Started
 
 **1. Create and activate the virtual environment**
 
@@ -19,32 +20,25 @@ pip install -e .
 
 **3. Train the model**
 
-Reads `data/pokemon_hgss.csv`, trains KMeans clustering, and saves `model.pkl`.
-
 ```bash
-python src/train.py
+python -m src.training.train
 ```
 
-**4. Start the API**
+**4. Run the app**
 
 ```bash
-python -m uvicorn src.main:app --reload
+streamlit run src/ui/streamlit_app.py
 ```
 
-The API will be available at `http://localhost:8000`. Interactive docs at `http://localhost:8000/docs`.
+## Conclusion
+Clustering is powerful to find different patterns in data. The hardest part is to play with the data, I spent a huge time modifying the centroids, and playing with different weights to achieve the expected result.
 
-## Endpoints
+- Kmean classifies data based on how far from centroids is.
+- It is a good approach to find unknown data patterns.
+- Modifying centroids and playing with weights is key to achieve your expected results.
 
-| Method | Path | Description |
-|--------|------|-------------|
-| `GET` | `/pokemon` | List all 253 pokemon with their cluster and role |
-| `GET` | `/pokemon/{name}` | Get stats, cluster, and role for one pokemon |
-| `GET` | `/team/suggest?starter={name}` | Suggest a balanced 6-member team |
-| `GET` | `/clusters` | Show all 6 cluster roles and their average stats |
+## Note
 
-**Example:**
+This project has weak architecture, main idea was to produce a K-mean real implementation and that is achieved. So I see no point in continue developing other things that focus lean towards software development refinement and not too much about machine learning as this is an experimental project to practice machine learning.
 
-```bash
-curl http://localhost:8000/pokemon/Chikorita
-curl "http://localhost:8000/team/suggest?starter=Chikorita"
-```
+Even documentation is a stale.
