@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from src.domain.pokemon.types import PokemonTypes
+from src.domain.pokemon.types import PokemonType
 
 
 @dataclass
@@ -16,6 +16,6 @@ class Stats:
 @dataclass
 class Pokemon:
     name: str
-    type1: PokemonTypes
-    type2: PokemonTypes | None
+    type1: PokemonType
+    type2: PokemonType | None
     stats: Stats
