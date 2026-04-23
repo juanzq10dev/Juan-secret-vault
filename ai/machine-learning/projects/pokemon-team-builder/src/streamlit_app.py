@@ -66,7 +66,9 @@ def pokemon_row_to_dict(row: pd.Series, cluster_roles: dict[int, dict]) -> dict:
 
 # ── Layout ────────────────────────────────────────────────────────────────────
 
-st.set_page_config(page_title="Pokemon Team Builder", page_icon="pokeball", layout="wide")
+st.set_page_config(
+    page_title="Pokemon Team Builder", page_icon="pokeball", layout="wide"
+)
 
 col_title, col_btn = st.columns([8, 1])
 with col_title:
@@ -170,7 +172,10 @@ with tab_lookup:
                 with st.expander(f"{info['Name']}  —  {info['Role']}"):
                     left, right = st.columns(2)
                     with left:
-                        st.write(f"**Type:** {info['Type 1']}" + (f" / {info['Type 2']}" if info["Type 2"] != "—" else ""))
+                        st.write(
+                            f"**Type:** {info['Type 1']}"
+                            + (f" / {info['Type 2']}" if info["Type 2"] != "—" else "")
+                        )
                         st.write(f"**Cluster:** {info['Cluster']}")
                         st.write(f"**Role:** {info['Role']}")
                     with right:
