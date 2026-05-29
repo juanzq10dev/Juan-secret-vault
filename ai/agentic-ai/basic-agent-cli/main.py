@@ -38,6 +38,9 @@ def main() -> None:
     while True:
         user_input = input("> ")
 
+        if user_input.strip() == "/exit":
+            break
+
         messages = add_user_message(messages, user_input)
         answer = chat(messages, client)
         messages = add_assistant_message(messages, answer)
