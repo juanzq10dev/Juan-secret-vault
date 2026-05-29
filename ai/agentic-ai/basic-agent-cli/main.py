@@ -1,5 +1,5 @@
-import os
 from anthropic import Anthropic
+from dotenv import load_dotenv
 from anthropic.types import MessageParam
 
 
@@ -20,7 +20,7 @@ def chat(messages: list[MessageParam], client: Anthropic) -> str:
         "model": "claude-haiku-4-5",
         "max_tokens": 1000,
         "messages": messages,
-        "system_prompt": system_prompt,
+        "system": system_prompt,
     }
 
     with client.messages.stream(**params) as stream:
@@ -31,12 +31,12 @@ def chat(messages: list[MessageParam], client: Anthropic) -> str:
 
 
 def main() -> None:
-    client = Anthropic(api_key=os.environ.get("ANTHROPIC_API_KEY"))
+    load_dotenv()
+    client = Anthropic()
     messages: list[MessageParam] = []
 
     while True:
         user_input = input("> ")
-        print(">", user_input)
 
         messages = add_user_message(messages, user_input)
         answer = chat(messages, client)
