@@ -3,8 +3,8 @@ from numpy.typing import NDArray
 
 
 class NDArrayUtils:
-    def from_list(self, list: list) -> NDArray:
-        return np.array(list)
+    def from_list(self, values: NDArray) -> NDArray:
+        return np.array(values)
 
     def zeros(self, size: int) -> NDArray:
         return np.zeros(size)

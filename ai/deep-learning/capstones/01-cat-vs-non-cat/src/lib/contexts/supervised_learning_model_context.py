@@ -10,7 +10,7 @@ class TrainedRegression(TrainedModel):
         self.bias = bias
         self.strategy = strategy
 
-    def predict(self, features: list) -> float:
+    def predict(self, features: NDArray) -> float:
         X = ndarray_utils.from_list(features)
         return self.strategy.prediction(X, self.weights, self.bias)
 
@@ -21,8 +21,8 @@ class UntrainedRegression(UntrainedModel):
 
     def fit(
         self,
-        features: list,
-        outputs: list,
+        features: NDArray,
+        outputs: NDArray,
         learning_rate: float = 0.1,
         epoch: int = 1000,
     ) -> TrainedModel:

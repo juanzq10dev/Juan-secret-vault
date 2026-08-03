@@ -3,11 +3,11 @@ from src.lib.contexts.supervised_learning_model_context import (
     TrainedRegression,
     UntrainedRegression,
 )
-from src.lib.abc.models import TrainedModel
+from numpy.typing import NDArray
 
 
 class TrainedLogisticRegression(TrainedRegression):
-    def __init__(self, weights, bias) -> None:
+    def __init__(self, weights: NDArray, bias: float) -> None:
         super().__init__(weights, bias, LogisticRegressionStrategy())
 
 
@@ -17,10 +17,10 @@ class UntrainedLogisticRegression(UntrainedRegression):
 
     def fit(
         self,
-        features: list,
-        outputs: list,
+        features: NDArray,
+        outputs: NDArray,
         learning_rate: float = 0.1,
         epoch: int = 1000,
-    ) -> TrainedModel:
+    ) -> TrainedLogisticRegression:
         trained_model = super().fit(features, outputs, learning_rate, epoch)
         return TrainedLogisticRegression(trained_model.weights, trained_model.bias)

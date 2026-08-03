@@ -7,11 +7,11 @@ class TrainedModel(ABC):
     bias: float
 
     @abstractmethod
-    def predict(self, features: list) -> float:
+    def predict(self, features: NDArray) -> float:
         pass
 
 
 class UntrainedModel(ABC):
     @abstractmethod
-    def fit(self, features: list, outputs: list) -> "TrainedModel":
+    def fit(self, features: NDArray, outputs: NDArray) -> "TrainedModel":
         pass
