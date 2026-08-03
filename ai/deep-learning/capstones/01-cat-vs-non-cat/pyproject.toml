@@ -1,0 +1,15 @@
+[project]
+name = "01-cat-vs-non-cat"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "h5py>=3.16.0",
+    "numpy>=2.5.1",
+    "pillow>=12.3.0",
+]
+
+[[tool.mypy.overrides]]
+module = "h5py.*"
+ignore_missing_imports = true
