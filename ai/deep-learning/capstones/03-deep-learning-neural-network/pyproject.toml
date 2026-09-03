@@ -1,0 +1,15 @@
+[project]
+name = "03-deep-learning-neural-network"
+version = "0.1.0"
+description = "L-layer deep neural network for cat vs non-cat image classification"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "h5py>=3.16.0",
+    "matplotlib>=3.11.1",
+    "numpy>=2.5.1",
+]
+
+[[tool.mypy.overrides]]
+module = "h5py.*"
+ignore_missing_imports = true
