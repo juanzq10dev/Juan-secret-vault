@@ -31,7 +31,10 @@ uv run main.py                                   # 4-layer net [12288, 20, 7, 5,
 uv run main.py --hidden-layers 7                 # 2-layer net
 uv run main.py --hidden-layers 20 7 5 --epochs 1500
 uv run main.py --learning-rate 0.01 --quiet
+uv run main.py --image path/to/photo.jpg          # classify your own image
 ```
+
+Any image is converted to RGB and resized to 64x64 to match the training data.
 
 The learning curve is written to `plots/`. The default 4-layer net reaches ~100% train /
 ~78% test accuracy.

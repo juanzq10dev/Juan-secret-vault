@@ -10,6 +10,7 @@ dependencies = [
     { name = "h5py" },
     { name = "matplotlib" },
     { name = "numpy" },
+    { name = "pillow" },
 ]
 
 [package.metadata]
@@ -17,6 +18,7 @@ requires-dist = [
     { name = "h5py", specifier = ">=3.16.0" },
     { name = "matplotlib", specifier = ">=3.11.1" },
     { name = "numpy", specifier = ">=2.5.1" },
+    { name = "pillow", specifier = ">=11.0.0" },
 ]
 
 [[package]]
